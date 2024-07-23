@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 51%);
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.user-list-container{
+    width: 66vw;
+}
+.user-div{
+    border: 1px solid black;
+    margin: 15px 5px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 80%);
+    text-align: left;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    padding: 0 15px;
+}
+.user-info{
+    width: 40%;
+    padding-left: 10px;
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+}
+.user-div img{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
