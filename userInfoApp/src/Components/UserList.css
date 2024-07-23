@@ -22,10 +22,14 @@ body{
     display: flex;
     padding: 0 15px;
 }
-.user-info{
+.user-div p{
     width: 40%;
-    padding-left: 10px;
     font-size: 1.5em;
+}
+.user-info{
+    
+    padding-left: 10px;
+    
     text-overflow: ellipsis;
 }
 .user-div img{

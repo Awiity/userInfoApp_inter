@@ -35,7 +35,9 @@ export default function UserList(){
                         <p className="user-info">   Full Name: {user.firstName} {user.lastName} {user.maidenName}<br />
                                                     Age: {user.age}<br/>
                                                     Gender: {user.gender}</p>
-                        <p className="user-contact-info"></p>
+                        <p className="user-contact-info">   Phone number: {user.phone}<br/>
+                                                            City: {user.address.city}, {user.address.country}<br/>
+                                                            Street: {user.address.address}</p>
 
 
                     </div>)}
