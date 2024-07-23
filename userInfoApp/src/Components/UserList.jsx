@@ -1,22 +1,37 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function UserList(){
 
-    let userList = []
+    const [users, setUsers] = useState([]);
 
-    fetch('https://dummyjson.com/users')
+    function fetchData() {
+        const url = 'https://dummyjson.com/users'
+        fetch(url)
 	    .then(res => res.json())
 	    .then(data => {
-		    for(const user of data.users){
-                userList.push(user)
-            }
-	});
+	        setUsers(data.users);
+            console.log(`Fetched data from ${url}`);
+        })
+    }
+    useEffect(() => {
+        fetchData();
+    }, [])
     
-    console.log(userList)
+
     return(
         <>
-            <h1 >LIST OF USERS</h1>
+            <h1>LIST OF USERS</h1>
+            <div className="user-list-container">
+            <ul>
+                {users.map((user) => 
+                <div key={user.id} className="user">
+
+                    <h2 className="user-names">{user.firstName} {user.lastName}</h2>
+
+                </div>)}
+            </ul>
+            </div>
         </>
     )
 
